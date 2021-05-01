@@ -1,8 +1,10 @@
-package com.example.btlandroidnhom7;
+package com.example.btlandroidnhom7.View;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.example.btlandroidnhom7.R;
 
 public class MainActivity extends AppCompatActivity {
 
