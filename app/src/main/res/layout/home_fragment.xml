@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
         <ss.com.bannerslider.Slider
             android:id="@+id/banner_slider"
-            android:slider_loopSlides="true"
+
             android:paddingBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="150dp">
@@ -21,5 +21,5 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </LinearLayout>
-
+//android:slider_loopSlides="true"
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
