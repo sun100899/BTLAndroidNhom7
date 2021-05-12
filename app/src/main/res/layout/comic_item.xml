@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="170dp">
+
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/img_comic"
+            android:layout_width="115dp"
+            android:layout_height="140dp" />
+
+        <TextView
+            android:id="@+id/tv_comic_name"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_comic"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="1dp"
+            android:gravity="left"
+            android:text="Comic name"
+            android:textColor="@color/primaryTextColor" />
+    </RelativeLayout>
+
+</RelativeLayout>
