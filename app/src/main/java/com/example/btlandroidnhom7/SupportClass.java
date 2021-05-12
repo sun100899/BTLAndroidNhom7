@@ -1,7 +1,9 @@
-package com.application.tuanlv.comicapp;
+package com.example.btlandroidnhom7;
 
-import com.application.tuanlv.comicapp.model.Chapter;
-import com.application.tuanlv.comicapp.model.Comic;
+
+
+import com.example.btlandroidnhom7.model.Chapter;
+import com.example.btlandroidnhom7.model.Comic;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.application.tuanlv.comicapp.receiver;
+package com.example.btlandroidnhom7.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -7,9 +7,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 
-import com.application.tuanlv.comicapp.SupportClass;
+import com.example.btlandroidnhom7.SupportClass;
+import static com.example.btlandroidnhom7.MainActivity.notificationNetwork;
 
-import static com.application.tuanlv.comicapp.MainActivity.notificationNetwork;
 
 public class NetworkChangeReceiver extends BroadcastReceiver {
     @Override

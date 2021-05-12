@@ -1,4 +1,4 @@
-package com.application.tuanlv.comicapp.adapter;
+package com.example.btlandroidnhom7.adapter;
 
 import java.util.ArrayList;
 

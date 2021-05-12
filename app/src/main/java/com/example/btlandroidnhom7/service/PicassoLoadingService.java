@@ -1,4 +1,4 @@
-package com.application.tuanlv.comicapp.service;
+package com.example.btlandroidnhom7.service;
 
 import android.widget.ImageView;
 
