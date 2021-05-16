@@ -1,6 +1,7 @@
 package com.example.btlandroidnhom7.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.btlandroidnhom7.SupportClass;
+import com.example.btlandroidnhom7.View.ChaptersActivity;
+import com.example.btlandroidnhom7.interfaces.IRecyclerItemCLickListener;
 import com.example.btlandroidnhom7.model.Comic;
 
 import java.util.ArrayList;
@@ -41,6 +45,12 @@ public class MyComicAdapter extends RecyclerView.Adapter<MyComicAdapter.MyViewHo
         PicassoLoadingService picasso = new PicassoLoadingService();
         picasso.loadImage(comics.get(position).getImage(), myViewHolder.imgComic);
         myViewHolder.tvComicName.setText(comics.get(position).getName());
+
+        myViewHolder.setRecyclerItemCLickListener((view, position1) -> {
+            SupportClass.comicSelected = comics.get(position);
+            Intent intent = new Intent(context, ChaptersActivity.class);
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -48,15 +58,26 @@ public class MyComicAdapter extends RecyclerView.Adapter<MyComicAdapter.MyViewHo
         return comics.size();
     }
 
-    public class MyViewHolder extends  RecyclerView.ViewHolder {
+    public class MyViewHolder extends  RecyclerView.ViewHolder implements View.OnClickListener {
 
         ImageView imgComic;
         TextView tvComicName;
+        IRecyclerItemCLickListener recyclerItemCLickListener;
+
+        public void setRecyclerItemCLickListener(IRecyclerItemCLickListener recyclerItemCLickListener){
+            this.recyclerItemCLickListener = recyclerItemCLickListener;
+        }
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             imgComic = itemView.findViewById(R.id.img_comic);
             tvComicName = itemView.findViewById(R.id.tv_comic_name);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            recyclerItemCLickListener.onClick(v, getAdapterPosition());
         }
     }
 

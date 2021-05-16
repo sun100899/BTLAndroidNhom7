@@ -3,10 +3,9 @@ package com.example.btlandroidnhom7.model;
 import java.util.ArrayList;
 
 public class Comic {
-
     private String Name;
     private String Image;
-    private ArrayList<Chapter> Chapter;
+    private ArrayList<Chapter> Chapters;
     private ArrayList<String> Categories;
     private boolean Like;
 
@@ -29,12 +28,12 @@ public class Comic {
         Image = image;
     }
 
-    public ArrayList<com.example.btlandroidnhom7.model.Chapter> getChapter() {
-        return Chapter;
+    public ArrayList<Chapter> getChapters() {
+        return Chapters;
     }
 
-    public void setChapter(ArrayList<com.example.btlandroidnhom7.model.Chapter> chapter) {
-        Chapter = chapter;
+    public void setChapters(ArrayList<Chapter> chapters) {
+        Chapters = chapters;
     }
 
     public ArrayList<String> getCategories() {
