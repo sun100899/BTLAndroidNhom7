@@ -47,7 +47,7 @@ public class MyComicAdapter extends RecyclerView.Adapter<MyComicAdapter.MyViewHo
         myViewHolder.tvComicName.setText(comics.get(position).getName());
 
         myViewHolder.setRecyclerItemCLickListener((view, position1) -> {
-            SupportClass.comicSelected = comics.get(position);
+            SupportClass.comicSelected = comics.get(position1);
             Intent intent = new Intent(context, ChaptersActivity.class);
             context.startActivity(intent);
         });

@@ -46,6 +46,7 @@ dependencies {
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'com.github.chrisbanes.photoview:library:1.2.4'
+    implementation 'com.wajahatkarim3.easyflipviewpager:easyflipviewpager:1.0.0'
 
     implementation platform('com.google.firebase:firebase-bom:27.1.0')
     implementation 'com.google.firebase:firebase-database'

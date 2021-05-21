@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -19,7 +20,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.btlandroidnhom7.MainActivity;
 import com.example.btlandroidnhom7.dialog.ProgressLoading;
+import com.google.android.gms.tasks.OnCanceledListener;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
@@ -149,20 +152,37 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
         progressDialog.setMessage("Wait a minute...");
         progressDialog.show();
 
-        mAuth.signInWithEmailAndPassword(email, passwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                progressDialog.dismiss();
-                if(task.isSuccessful()){
-                    Intent intent = new Intent(StartActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-                else {
-                    Snackbar.make(btnLogIn, "Error " + task.getException().getMessage(), Snackbar.LENGTH_LONG).show();
-                }
-            }
-        });
+        mAuth.signInWithEmailAndPassword(email, passwd)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressDialog.dismiss();
+                        if(task.isSuccessful()){
+                            Intent intent = new Intent(StartActivity.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                        else {
+                            Snackbar.make(btnLogIn, "Error " + task.getException().getMessage(), Snackbar.LENGTH_LONG).show();
+                        }
+                    }
+                })
+                .addOnCanceledListener(new OnCanceledListener() {
+                    @Override
+                    public void onCanceled() {
+                        progressDialog.dismiss();
+                        Log.d("CANCEL", "ALOALO");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        progressDialog.dismiss();
+                        Log.i("e", "expection");
+                        Log.d("sunxinh", e.toString());
+                    }
+                });
+
     }
 
 }
