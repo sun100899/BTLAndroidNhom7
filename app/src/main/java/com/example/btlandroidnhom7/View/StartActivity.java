@@ -126,26 +126,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                 break;
         }
     }
-    private void logIn(String email, String passwd) {
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Starting login...");
-        progressDialog.show();
 
-        mAuth.signInWithEmailAndPassword(email, passwd)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
-                        if(task.isSuccessful()) {
-                            Intent intent = new Intent(StartActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            finish();
-                        } else {
-                            Snackbar.make(btnLogIn, "Error " + task.getException().getMessage(), Snackbar.LENGTH_LONG).show();
-                        }
-                    }
-                });
-    }
 
     private void logInSun(String email, String passwd){
         final ProgressDialog  progressDialog = new ProgressDialog(this);

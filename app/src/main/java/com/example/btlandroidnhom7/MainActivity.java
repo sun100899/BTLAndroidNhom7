@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 
 import com.example.btlandroidnhom7.View.StartActivity;
 import com.example.btlandroidnhom7.fragment.HomeFragment;
+import com.example.btlandroidnhom7.fragment.SettingsFragment;
 import com.example.btlandroidnhom7.receiver.NetworkChangeReceiver;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -49,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
                         setFragment(HomeFragment.newInstance());
+                        return true;
+                    case R.id.nav_settings:
+                        setFragment(SettingsFragment.newInstance());
                         return true;
                     default: return false;
                 }

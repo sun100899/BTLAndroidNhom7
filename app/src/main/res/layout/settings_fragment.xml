@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            app:title="Settings"
+            android:id="@+id/toolbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+        </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/img_avatar_setting"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/img_avatar_setting"
+                android:id="@+id/tv_username_setting"
+                android:textColor="@color/primaryTextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_email_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_username_setting"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:textColor="@color/primaryLightColor"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:text="User setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/tv_change_passwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/img_lock"
+                android:src="@mipmap/icons8_key_500"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/img_lock"
+                android:text="Change password"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/tv_change_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/img_name"
+                android:src="@mipmap/icons8_edit_500"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/img_name"
+                android:text="Change user name"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:textColor="@color/primaryLightColor"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:text="Preferences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <RelativeLayout
+            android:id="@+id/tv_about_us_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/img_about_us"
+                android:src="@mipmap/icons8_about_500"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/img_about_us"
+                android:text="About us"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tv_rate_app_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/img_rate"
+                android:src="@mipmap/icons8_star_filled_100"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/img_rate"
+                android:text="Rate app"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/tv_share_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/img_share"
+                android:src="@mipmap/icons8_share_500"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/img_share"
+                android:text="Share"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tv_feed_back_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/img_feedback"
+                android:src="@mipmap/icons8_feed_back_500"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/img_feedback"
+                android:text="Feed back"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tv_logout_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/img_logout"
+                android:src="@mipmap/icons8_shutdown_100"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/img_logout"
+                android:text="Log out"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

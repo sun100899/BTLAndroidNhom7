@@ -12,11 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
 <!--        <activity android:name=".View.StartActivity" />-->
-        <activity android:name="MainActivity" />
+        <activity android:name=".View.StartActivity" />
         <activity android:name=".View.RegisterActivity" />
         <activity android:name=".View.ChaptersActivity" />
         <activity android:name=".View.ViewComicActivity" />
-        <activity android:name=".View.StartActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

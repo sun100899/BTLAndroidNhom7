@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">BTLAndroidNhom7</string>
+    <string name="app_name">BTLNhom07</string>
+    <string name="default_notification_channel_id">com.example.btlandroidnhom7</string>
+    <string name="default_notification_channel_name">Comic life</string>
+    <string name="email_title">title</string>
+    <string name="email_body">message</string>
+    <string name="infoAuthor">
+        ThanhXuan\n
+        github.com/sun100899
+    </string>
 </resources>
