@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddSanPham">
+
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TableRow>
+
+            <TextView
+                android:text="ID"
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/edittext_addproduct_addid"
+                android:enabled="false"
+                android:textSize="20sp"></EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="Tên"
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/edittext_addproduct_addname"
+                android:hint="Nhập tên"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"></EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="Giá"
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/edittext_addproduct_addprices"
+                android:hint="Nhập giá"
+                android:inputType="number"
+                android:textSize="20sp"></EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="Chọn ảnh"
+                android:textSize="20sp"></TextView>
+
+            <Spinner
+                android:id="@+id/spiner_addproduct_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"></Spinner>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="Chọn thể loại"
+                android:textSize="20sp"></TextView>
+
+            <Spinner
+                android:id="@+id/spiner_addproduct_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"></Spinner>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_margin="10dp"
+                android:text="Thêm"
+                android:textAllCaps="false"
+                android:textSize="20sp"></Button>
+
+            <Button
+                android:id="@+id/btnRedo"
+                android:layout_margin="10dp"
+                android:text="Làm lại"
+                android:textAllCaps="false"
+                android:textSize="20sp"></Button>
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout >

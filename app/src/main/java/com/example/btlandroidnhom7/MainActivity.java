@@ -2,6 +2,7 @@ package com.example.btlandroidnhom7;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public static Boolean flag = false;
 
     EditText editUserName;
-    Button btnCreate;
+    Button btnCreate, btnDanhSach;
     TextView textView;
 
     private String userName;
@@ -30,15 +31,23 @@ public class MainActivity extends AppCompatActivity {
 
         editUserName = findViewById(R.id.hoTen);
         btnCreate = findViewById(R.id.btnCreate);
+        btnDanhSach = findViewById(R.id.btnDanhSach);
         textView = findViewById(R.id.tvXinChao);
 
         loadUser();
-        updateDataUser();
 
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 saveData();
+            }
+        });
+
+        btnDanhSach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DanhSachSP.class);
+                startActivity(intent);
             }
         });
     }
@@ -48,19 +57,14 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(TABLE_ACCS, MODE_PRIVATE);
         userName = sharedPreferences.getString(USERNAME, "");
         if(userName!= ""){
-            flag = true;
+           textView.setText("Xin chào: "+userName);
+        }
+        else {
+            textView.setText("Chưa có user nào!!Vui lòng tạo user");
         }
     }
 
-    public void updateDataUser(){
-//        if(flag==true){
-//            textView.setText("Xin chào: "+userName);
-//        }
-//        else {
-//            textView.setText("chua co du lieu");
-//        }
-        textView.setText(userName);
-    }
+
 
     public void saveData(){
         SharedPreferences sharedPreferences = getSharedPreferences(TABLE_ACCS, MODE_PRIVATE);
@@ -69,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         editor.putString(USERNAME, editUserName.getText().toString());
 
         editor.apply();
+        String name = sharedPreferences.getString(USERNAME, "");
+        textView.setText("Xin chào: "+ name);
         Toast.makeText(this, "Đã tạo người dùng", Toast.LENGTH_LONG).show();
     }
 }
