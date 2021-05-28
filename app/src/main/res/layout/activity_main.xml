@@ -15,13 +15,14 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_main"
-        app:menu="@menu/nav_item"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-1dp"
         android:background="@color/background_bottom_navigationbar"
         app:itemIconTint="@drawable/bottom_navigation_selector"
         app:itemTextColor="@drawable/bottom_navigation_selector"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"/>
+        app:menu="@menu/nav_item" />
 
     <LinearLayout
         android:id="@+id/no_internet"

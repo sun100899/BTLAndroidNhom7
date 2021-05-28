@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/frame_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_search"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:popupTheme="@style/AppTheme.AppBarOverlay"
+            android:background="@color/primaryDarkColor"
+            app:titleTextColor="@color/primaryTextColor">
+        </androidx.appcompat.widget.Toolbar>
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/material_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="invisible"
+        android:layout_below="@id/frame_search"
+        android:id="@+id/recycler_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tv_not_found"
+        android:visibility="visible"
+        android:textColor="@color/primaryTextColor"
+        android:text="Search for Comics"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

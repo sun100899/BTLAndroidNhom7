@@ -16,6 +16,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.example.btlandroidnhom7.View.StartActivity;
+import com.example.btlandroidnhom7.fragment.CategoriesFragment;
 import com.example.btlandroidnhom7.fragment.HomeFragment;
 import com.example.btlandroidnhom7.fragment.SettingsFragment;
 import com.example.btlandroidnhom7.receiver.NetworkChangeReceiver;
@@ -50,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
                         setFragment(HomeFragment.newInstance());
+                        return true;
+                    case R.id.nav_categories:
+                        setFragment(CategoriesFragment.newInstance());
                         return true;
                     case R.id.nav_settings:
                         setFragment(SettingsFragment.newInstance());
