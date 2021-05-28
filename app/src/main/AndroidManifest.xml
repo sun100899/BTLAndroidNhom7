@@ -16,6 +16,7 @@
         <activity android:name=".View.RegisterActivity" />
         <activity android:name=".View.ChaptersActivity" />
         <activity android:name=".View.ViewComicActivity" />
+        <activity android:name=".View.SearchActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

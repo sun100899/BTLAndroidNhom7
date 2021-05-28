@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar_categories"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    app:title="Categories"
+    app:popupTheme="@style/AppTheme.AppBarOverlay"
+    android:background="@color/primaryDarkColor"
+    app:titleTextColor="@color/primaryTextColor">
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_below="@id/toolbar_categories"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold|italic"
+                    android:background="@drawable/horizontal_line"
+                    android:textSize="20sp"
+                    android:padding="5dp"
+                    android:text="Action"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_action_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="172dp">
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold|italic"
+                    android:background="@drawable/horizontal_line"
+                    android:padding="5dp"
+                    android:text="Comedy"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_comedy_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="172dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold|italic"
+                    android:background="@drawable/horizontal_line"
+                    android:text="Adventure"
+                    android:padding="5dp"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_adventure_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="172dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textStyle="bold|italic"
+                    android:background="@drawable/horizontal_line"
+                    android:text="Sports"
+                    android:textColor="@color/primaryTextColor"
+                    android:padding="5dp"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_sports_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="172dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
